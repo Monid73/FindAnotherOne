@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Проверяю твою память</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body style="background-color: #382c34;">
+<div class="main">
+<div class="center ">
+<div>У тебя <span class="sum"></span> попытка</div>
+<button class="btn">Начать</button>
+
+<div class="name">Найдите верный прямоугольник</div>
+</div>
+<div class="app"></div>
+<div class="wrong"></div>
+<div class="miniLU"></div>
+<div class="miniLD"></div>
+<div class="miniRU"></div>
+<div class="miniRD"></div>
+<div class="up"></div>
+<div class="right"></div>
+<div class="left"></div>
+<div class="down"></div>
+<div class="original"></div>
+<div class="nice"></div>
+</div>
+
+	<div class="win">
+		Молодец! Ты выиграл!
+	</div>
+
+<script type="text/javascript">
+			let sum = 2
+			let upward = 240;
+			let leftward = 1100;
+			let upward1 = 660;
+			let leftward1 = 480;
+
+			let leftwardLU = 600;
+			let upwardLU = 300;
+
+			let leftwardLD = 600;
+			let upwardLD = 720;
+
+			let leftwardRU = 1170;
+			let upwardRU = 300;
+
+			let leftwardRD = 1170;
+			let upwardRD = 720;
+
+			let wrongleftLD = 600;
+			let wrongtopLD = 720
+
+			let leftwrong = 400;
+
+			let appleftRD = 1170;
+			let apptopRD = 300;
+
+			let rightapp = 50;
+		document.querySelector(".sum").innerHTML = sum
+		document.querySelector(".btn").onclick = function(){
+			document.querySelector(".left").style.left = leftward + "px";
+			document.querySelector(".up").style.top = upward + "px";
+			document.querySelector(".right").style.left = leftward1 + "px";
+			document.querySelector(".down").style.top = upward1 + "px";
+
+			document.querySelector(".original").style.background = "black";
+			document.querySelector(".up").style.backgroundImage = "url(up.png)";
+			document.querySelector(".right").style.backgroundImage = "url(left.png)";
+			document.querySelector(".left").style.backgroundImage = "url(right.png)";
+			document.querySelector(".down").style.backgroundImage = "url(down.png)";
+			document.querySelector(".wrong").style.backgroundImage = "url(oops.png)";
+			document.querySelector(".app").style.backgroundImage = "url(app.png)";
+			document.querySelector(".sum").innerHTML = sum
+		}
+
+		document.querySelector(".original").onclick = function() {
+			document.querySelector(".miniLU").style.left = leftwardLU + "px";
+			document.querySelector(".miniLU").style.top = upwardLU + "px";
+
+			document.querySelector(".miniLD").style.left = leftwardLD + "px";
+			document.querySelector(".miniLD").style.top = upwardLD + "px";
+
+			document.querySelector(".miniRU").style.left = leftwardRU + "px";
+			document.querySelector(".miniRU").style.top = upwardRU + "px";
+
+			document.querySelector(".miniRD").style.left = leftwardRD + "px";
+			document.querySelector(".miniRD").style.top = upwardRD + "px";
+
+			document.querySelector(".miniLU").style.backgroundImage = "url(diag.png)";
+			document.querySelector(".miniLD").style.backgroundImage = "url(hm.png)";
+			document.querySelector(".miniRU").style.backgroundImage = "url(hmm.png)";
+			document.querySelector(".miniRD").style.backgroundImage = "url(hmmm.png)";
+			document.querySelector(".wrong").style.left = wrongleftLD + "px";
+			document.querySelector(".wrong").style.top = wrongtopLD + "px";
+
+			document.querySelector(".app").style.left = appleftRD + "px";
+			document.querySelector(".app").style.top = apptopRD + "px";
+
+			document.querySelector(".name").innerHTML = "Найдите верный квадрат"
+		}
+
+		document.querySelector(".miniLD").onclick = function() {
+			document.querySelector(".wrong").style.left = leftwrong + "px";
+			sum = sum - 1
+			document.querySelector(".sum").innerHTML = sum
+			document.querySelector(".miniLD").style.display = "none";
+		}
+
+		document.querySelector(".miniRD").onclick = function() {
+			sum = sum - 1
+			document.querySelector(".sum").innerHTML = sum
+			document.querySelector(".miniRD").style.display = "none";
+		}
+
+		document.querySelector(".miniRU").onclick = function() {
+			document.querySelector(".app").style.top = rightapp + "px";
+			document.querySelector(".app").style.backgroundImage = "url(app.png)";
+			document.querySelector(".miniRU").style.display = "none";
+		}
+
+		document.querySelector(".nice").onclick = function() {
+				document.querySelector(".main").style.display = "none";
+				document.querySelector(".win").style.display = "block";
+		}
+</script>
+</body>
+</html>

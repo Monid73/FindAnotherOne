@@ -1,0 +1,136 @@
+.center {
+	text-align: center;
+	margin-top: 100px;
+	font-size: 40px;
+	font-family: Arial;
+}
+.size {
+	background-image: 100%;
+	height: 200px;
+	width: 300px;
+}
+
+.main {
+
+}
+
+.win {
+	display: none;
+	background: pink;
+}
+
+.miniLU {
+	height: 80px;
+	width: 100px;
+	background: black;
+	position: absolute;
+	top: 450px;
+	left: 790px;
+	transition: 1s;
+}
+.miniLD {
+	height: 80px;
+	width: 100px;
+	background: black;
+	position: absolute;
+	top: 450px;
+	left: 790px;
+	transition: 1s;
+}
+.miniRU {
+	height: 80px;
+	width: 100px;
+	background: black;
+	position: absolute;
+	top: 450px;
+	left: 790px;
+	transition: 0.9s;
+}
+.miniRD {
+	height: 80px;
+	width: 100px;
+	background: black;
+	position: absolute;
+	top: 450px;
+	left: 790px;
+	transition: 0.9s;
+}
+
+.wrong {
+	height: 80px;
+	width: 100px;
+	background: black;
+	position: absolute;
+	top: 450px;
+	left: 790px;
+	transition: 1s;
+}
+.app {
+	height: 80px;
+	width: 100px;
+	background: black;
+	position: absolute;
+	top: 450px;
+	left: 790px;
+	transition: 0.9s;
+}
+
+.nice {
+	height: 10px;
+	width: 10px;
+	background-color: #3c2c34;
+	position: absolute;
+	top: 90px;
+	left: 160px;
+}
+
+.original {
+	height: 200px;
+	width: 300px;
+	background: black;
+	position: absolute;
+	top: 450px;
+	left: 790px;
+	transition: 1s;
+}
+.up {
+	height: 200px;
+	width: 300px;
+	background: black;
+	position: absolute;
+	top: 450px;
+	left: 790px;
+	transition: 1s;
+}
+.right {
+	height: 200px;
+	width: 300px;
+	background: black;
+	position: absolute;
+	top: 450px;
+	left: 790px;
+	transition: 1s;
+}
+.left {
+	height: 200px;
+	width: 300px;
+	background: black;
+	position: absolute;
+	top: 450px;
+	left: 790px;
+	transition: 1s;
+}
+.down {
+	height: 200px;
+	width: 300px;
+	background: black;
+	position: absolute;
+	top: 450px;
+	left: 790px;
+	transition: 1s;
+}
+.btn {
+	height: 30px;
+	width: 100px;
+	font-size: 16px;
+}
